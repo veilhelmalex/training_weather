@@ -1,5 +1,3 @@
-console.log("client side server initiated");
-
 async function getEndpoint(endpoint, params = new Map()){
     let markup = `http://localhost:3000/${endpoint}?`;
     let count = params.size - 1;
