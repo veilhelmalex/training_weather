@@ -75,6 +75,7 @@ app.get(`/weather`, (req, res)=>{
             forecast: result.forecast,
             temperature: result.temperature,
             feelsLike: result.feelslike,
+            icons: result.icon
         }))
         return true;     
     }

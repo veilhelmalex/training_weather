@@ -23,7 +23,8 @@ async function forecast(place, placeName) {
                 temperature: weather.current.temperature, 
                 location: placeName, 
                 feelslike: weather.current.feelslike,
-                forecast: weather.current.weather_descriptions[0]  
+                forecast: weather.current.weather_descriptions[0],
+                icon: weather.current.weather_icons[0]  
         
             }   
          }

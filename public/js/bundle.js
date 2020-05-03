@@ -20,18 +20,27 @@ const displayWeather= (result) => {
     const displayCanvas = document.querySelector(".display__weather");
     displayCanvas.innerHTML = " ";
     const values = Object.entries(result);
-    let markup;
+    let textMarkup;
+    let imgMarkup =`
+    <img class="weather_icon" src="${values[6][1]}" alt="weather_icon">
+    `
     if(values[0][0]== "error"){
         console.log(values);
-        markup = `<p id="error">${values[2][1]}</p>`
+        textMarkup = `<p id="error">${values[2][1]}</p>`
     }else {
-        markup = values.map((element)=>{
-            let mark = `<p id="${element[0]}"> ${element[0]} = ${element[1]} <p/>`
-            return mark;
+        textMarkup = values.map((element)=>{
+            if(element[0]=="icons"){
+                return ""
+            } else {
+                let mark = `<p id="${element[0]}"> ${element[0]} = ${element[1]} <p/>`
+                return mark;
+            }
         }).join(" ");
     }
     
-    displayCanvas.insertAdjacentHTML("beforeend",markup);
+
+    displayCanvas.insertAdjacentHTML("beforeend",textMarkup);
+    displayCanvas.insertAdjacentHTML("afterbegin",imgMarkup);
     inputUI.focus();
 }
 
