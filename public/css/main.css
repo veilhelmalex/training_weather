@@ -1,0 +1,31 @@
+body {
+    font-family: "montserrat", sans-serif;
+    color: #333333;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 0 16px;
+    background: lavender;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+footer {
+    border-top: 1px solid #888888;
+    color: #888888;
+    margin-top: 16px;
+    padding: 16px;
+}
+
+header {
+    padding: 8px;
+}
+
+header h1 {
+    font-size: 48px;
+}
+
+.main{
+    flex-grow: 1;
+}
