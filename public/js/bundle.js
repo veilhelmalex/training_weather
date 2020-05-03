@@ -1,8 +1,9 @@
 async function getEndpoint(endpoint, params = new Map()){
-    let markup = `http://localhost:3000/${endpoint}?`;
+    let markup = `/${endpoint}?`;
     let count = params.size - 1;
     params.forEach((val, key) =>{
         markup += `${key}=${val}`
+
         if(count > 0){
             markup += `&`
             count --;
